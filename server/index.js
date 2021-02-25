@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use('/posts', postRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Hello to Memories App');
+});
+
 //const CONNECTION_URL = 'mongodb+srv://memories:memories776601@cluster0.zu3w4.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 

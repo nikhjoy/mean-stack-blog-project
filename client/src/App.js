@@ -6,6 +6,7 @@ import memories from './images/memories.png';
 import useStyles from './styles';
 import { useDispatch } from 'react-redux';
 import { getPosts } from './actions/posts';
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => {
     const [currentId, setCurrentId] = useState(0);
@@ -18,10 +19,7 @@ const App = () => {
     return (
 
         <Container maxWidth="lg">
-            <AppBar className={classes.appBar} position="static" color="inherit">
-                <Typography className={classes.heading} variant="h2" align="center">Memories</Typography> 
-                <img className={classes.image} src={memories} alt="memories" height="60" />
-            </AppBar>
+            <Navbar />
             <Grow in>
                 <Container>
                     <Grid className={classes.mainContainer} container justify="space-between" alignItems="stretch" spacing={3}>
